@@ -266,3 +266,9 @@ insert into public.quests (id, title, description, target, badge) values
   ('storyteller', 'Storyteller', 'Write three café reviews.', 3, 'Quill'),
   ('daydreamer', 'Daydreamer', 'Save five cafés to your wishlist.', 5, 'Cloud')
 on conflict (id) do nothing;
+
+-- ---------------------------------------------------------------- backfill
+-- Members who signed up before this migration ran get a profile too.
+insert into public.profiles (id, display_name)
+select id, coalesce(nullif(split_part(email, '@', 1), ''), 'Member') from auth.users
+on conflict (id) do nothing;
