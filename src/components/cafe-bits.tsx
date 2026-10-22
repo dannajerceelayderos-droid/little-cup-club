@@ -19,7 +19,7 @@ export function SourceBadge({ source, className = "" }: { source: Cafe["source"]
   if (source === "curated")
     return (
       <span className={`inline-flex items-center gap-1 rounded-full bg-sage px-2 py-0.5 text-[11px] font-extrabold uppercase tracking-wide text-olive-deep ${className}`}>
-        Real café · details unverified
+        Real café
       </span>
     );
   if (source === "osm")
