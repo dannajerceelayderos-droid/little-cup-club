@@ -74,6 +74,12 @@ function storybookify(map: MLMap) {
       set(layer.id, "text-halo-color", "#FFF9EE");
       set(layer.id, "text-halo-width", 1.4);
       set(layer.id, "icon-opacity", 0.75);
+      try {
+        if (map.getLayoutProperty(layer.id, "text-field"))
+          map.setLayoutProperty(layer.id, "text-field", ["coalesce", ["get", "name:en"], ["get", "name:latin"], ["get", "name"]]);
+      } catch {
+        /* layer without text */
+      }
     }
   }
 }

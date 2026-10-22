@@ -22,21 +22,8 @@ function art(i: number): CafeArt {
 type Seed = Omit<Cafe, "id" | "source" | "art" | "verified" | "attribution">;
 
 const seeds: Seed[] = [
-  {
-    name: "Seven Lakes Kapihan",
-    description:
-      "A wooden-shuttered nook a short walk from the lake, imagined as the kind of place that serves barako in enamel cups and buko pie by the slice.",
-    lat: 14.0761, lng: 121.3281, city: "San Pablo City", region: "laguna", price: 1,
-    amenities: ["coffee", "pastries", "outdoor", "garden"], moods: ["cozy", "garden", "hidden"], ambiance: ["rustic", "quiet"],
-    menuHighlights: ["Barako pour-over", "Buko pie", "Tablea hot chocolate"], independent: true,
-  },
-  {
-    name: "Little Kalamansi",
-    description: "Bright citrus tonics, cold brew and sunny window seats made for journaling.",
-    lat: 14.0668, lng: 121.3214, city: "San Pablo City", region: "laguna", price: 2,
-    amenities: ["coffee", "wifi", "outlets", "study", "aircon"], moods: ["study", "cozy"], ambiance: ["airy", "quiet"],
-    menuHighlights: ["Kalamansi espresso tonic", "Ensaymada"], independent: true,
-  },
+
+
   {
     name: "Mossy Mug Garden Café",
     description: "Tables tucked between ferns and orchids, with a resident ginger cat who naps by the register.",
@@ -199,14 +186,13 @@ const AUTHORS = [
 ];
 
 const sampleReviewSeeds: Array<[number, number, 1 | 2 | 3 | 4 | 5, string, number]> = [
-  [0, 0, 5, "The kind of quiet morning I needed. Sat by the window and finished a whole sketchbook page.", 2],
-  [2, 2, 5, "The cat picked my lap. That's a five-star review on its own.", 3],
-  [5, 4, 4, "Gorgeous view, a bit chilly — bring a cardigan. The matcha flight was a lovely way to try three styles.", 5],
-  [8, 1, 4, "Outlets at nearly every seat and a playlist that never gets in the way.", 6],
-  [13, 3, 5, "Firewood smell, strawberry taho, foggy windows. Baguio in a cup.", 8],
-  [10, 5, 4, "Quiet hour is real and I'm grateful for it.", 9],
-  [19, 2, 5, "We stayed for the garden and ended up staying for three hours.", 11],
-  [17, 4, 4, "Sunset, silvanas, sea breeze. Simple and perfect.", 13],
+  [0, 2, 5, "The cat picked my lap. That's a five-star review on its own.", 3],
+  [3, 4, 4, "Gorgeous view, a bit chilly — bring a cardigan. The matcha flight was a lovely way to try three styles.", 5],
+  [6, 1, 4, "Outlets at nearly every seat and a playlist that never gets in the way.", 6],
+  [11, 3, 5, "Firewood smell, strawberry taho, foggy windows. Baguio in a cup.", 8],
+  [8, 5, 4, "Quiet hour is real and I'm grateful for it.", 9],
+  [17, 2, 5, "We stayed for the garden and ended up staying for three hours.", 11],
+  [15, 4, 4, "Sunset, silvanas, sea breeze. Simple and perfect.", 13],
 ];
 
 /** Clearly-labelled sample reviews. They are shown as examples and never affect ratings. */

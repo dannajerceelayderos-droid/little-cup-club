@@ -93,6 +93,7 @@ export function sortCafes(
   // relevance: name matches first, then richer listings
   const q = (opts.q ?? "").trim().toLowerCase();
   const rel = (c: Cafe) =>
+    (c.source === "sample" ? 0 : 20) +
     (q && c.name.toLowerCase().startsWith(q) ? 10 : 0) +
     (q && c.name.toLowerCase().includes(q) ? 5 : 0) +
     c.amenities.length * 0.2 + (c.description ? 0.5 : 0);

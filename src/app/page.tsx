@@ -22,7 +22,7 @@ const MOOD_COPY: Record<Mood, string> = {
 };
 
 export default function Home() {
-  const stampCafes = [SAMPLE_CAFES[0], SAMPLE_CAFES[5], SAMPLE_CAFES[13]];
+  const stampCafes = [SAMPLE_CAFES[0], SAMPLE_CAFES[3], SAMPLE_CAFES[11]];
   return (
     <>
       {/* HERO */}
